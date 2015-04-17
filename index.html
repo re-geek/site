@@ -1,0 +1,14 @@
+---
+layout: homepage
+---
+
+<ul id="postUl">
+{% for post in site.posts %}
+  {% capture currentyear %}{{post.date | date: "%Y"}}{% endcapture %}
+  {% if currentyear != year %}
+    <li class="year">{{ currentyear }}</li>
+    {% capture year %}{{currentyear}}{% endcapture %} 
+  {% endif %}
+    <li><time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>

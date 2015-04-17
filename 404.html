@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>404 - Page Not Found</title>
+<link rel="shortcut icon" href="http://www.suxiaogang.com/images/fav.png" type="image/x-icon" />
+<link href="http://cdn.bootcss.com/animate.css/3.1.0/animate.min.css" rel="stylesheet">
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+html{
+	background: url('') center center no-repeat;
+	background-size:cover;
+	height:100%;
+	overflow:hidden;
+}
+h1{
+	font-family: "Helvetica Neue",Helvetica;
+	font-size: 200px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #FFF;
+	text-align: center;
+	margin-top: 150px;
+	text-shadow: 20px 10px 10px rgba(0, 0, 0, 0.7);
+	-webkit-transition: 1.8s;
+    -moz-transition: 1.8s;
+    transition: 1.8s;
+}
+</style>
+</head>
+<body>
+<h1>404</h1>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(function(){
+	$('h1').addClass('animated bounceIn');
+	var bgArray = [
+				'http://ww4.sinaimg.cn/large/5fd37818gw1ej3wcogaljj21hc11mb16.jpg',
+				'http://ww4.sinaimg.cn/large/5fd37818gw1eizu62nqhaj21uo18gam9.jpg',
+				'http://ww1.sinaimg.cn/large/5fd37818gw1eiyp0wld6fj20zk0nvadx.jpg',
+				'http://ww2.sinaimg.cn/large/5fd37818gw1eiyp0qy0jzj20zk0qojvz.jpg',
+				'http://ww3.sinaimg.cn/large/5fd37818gw1ei8kxxf63dj21jk18gnay.jpg',
+				'http://ww3.sinaimg.cn/large/5fd37818gw1eiyp0rzsrjj20zk0nkdj2.jpg'];
+	var bg = bgArray[Math.floor(Math.random()* bgArray.length)];
+	$('html').css('background', 'url(' + bg + ') no-repeat center center fixed');
+	$('html').css('background-size', 'cover');
+
+});
+</script>
+</body>
+</html>
